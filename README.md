@@ -25,7 +25,7 @@ If you have found a bug or would like to request a feature please use
 [Github's Issues](https://github.com/roundhouse/Dually/issues) to report and track issues.
 
 #### Known Issues
-* Resolution menu doesn't currently change the second screen resolution, it currently only lists the available screen modes.
+* ~~Resolution menu doesn't currently change the second screen resolution, it currently only lists the available screen modes.~~ (needs further testing)
 
 
 ## Contributing

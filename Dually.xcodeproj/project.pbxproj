@@ -12,8 +12,7 @@
 		3FF1FF46196F044F005231DD /* DuallyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1FF45196F044F005231DD /* DuallyTests.swift */; };
 		3FF1FF50196F04D4005231DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FF1FF4F196F04D4005231DD /* Main.storyboard */; };
 		3FF1FF52196F04F3005231DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1FF51196F04F3005231DD /* ViewController.swift */; };
-		3FF1FF54196F0729005231DD /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 3FF1FF53196F0729005231DD /* .gitignore */; };
-		3FF1FF56196F072D005231DD /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1FF55196F072D005231DD /* README.md */; };
+		3FF38201196F371F0013D82B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3FF38200196F371F0013D82B /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +35,7 @@
 		3FF1FF45196F044F005231DD /* DuallyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuallyTests.swift; sourceTree = "<group>"; };
 		3FF1FF4F196F04D4005231DD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3FF1FF51196F04F3005231DD /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3FF1FF53196F0729005231DD /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		3FF1FF55196F072D005231DD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3FF38200196F371F0013D82B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +77,7 @@
 		3FF1FF2F196F044F005231DD /* Dually */ = {
 			isa = PBXGroup;
 			children = (
-				3FF1FF55196F072D005231DD /* README.md */,
-				3FF1FF53196F0729005231DD /* .gitignore */,
+				3FF38200196F371F0013D82B /* Settings.bundle */,
 				3FF1FF4F196F04D4005231DD /* Main.storyboard */,
 				3FF1FF51196F04F3005231DD /* ViewController.swift */,
 				3FF1FF32196F044F005231DD /* AppDelegate.swift */,
@@ -196,7 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FF1FF3A196F044F005231DD /* Images.xcassets in Resources */,
-				3FF1FF54196F0729005231DD /* .gitignore in Resources */,
+				3FF38201196F371F0013D82B /* Settings.bundle in Resources */,
 				3FF1FF50196F04D4005231DD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,7 +212,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FF1FF56196F072D005231DD /* README.md in Sources */,
 				3FF1FF52196F04F3005231DD /* ViewController.swift in Sources */,
 				3FF1FF33196F044F005231DD /* AppDelegate.swift in Sources */,
 			);
@@ -396,6 +392,7 @@
 				3FF1FF4B196F044F005231DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3FF1FF4C196F044F005231DD /* Build configuration list for PBXNativeTarget "DuallyTests" */ = {
 			isa = XCConfigurationList;
@@ -404,6 +401,7 @@
 				3FF1FF4E196F044F005231DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
