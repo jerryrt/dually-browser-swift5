@@ -26,7 +26,7 @@ If you have found a bug or would like to request a feature please use
 
 #### Known Issues
 * ~~Resolution menu doesn't currently change the second screen resolution, it currently only lists the available screen modes.~~ (needs further testing)
-
+* If left idle the iOS device will go to sleep or lock leaving the second screen empty. [View the issue](https://github.com/roundhouse/Dually/issues/1)
 
 ## Contributing
 For contributing use the "fork-and-pull" Git workflow. In general use the following steps (** Be sure to merge the latest from "development" before making a pull request ** ):
