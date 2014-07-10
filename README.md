@@ -6,13 +6,13 @@ Quickly and easily display content on a second screen from your iOS device using
 ## Features
 * A web view for each screen, each capable of loading a different URL.
 * Manual refresh for each of the screens
-* Settings app configuration to control URLs. Great when used with Guided access to secure the iPad for guest use.
+* Settings app configuration to control URLs. Great when used with Guided access to secure the iOS for guest use.
 * Automatic refresh when the URLs change in the Settings app
 * Second screen resolution menu, allows you to control the resolution of the external display.
 
 ## Usage
 * Download/Clone the git repo
-* Open Dually
+* Open Dually project in Xcode
 * Build and Run Dually on the iOS device
 * Go to the settings app
 	* Find Dually settings
