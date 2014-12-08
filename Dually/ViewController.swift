@@ -28,13 +28,13 @@ import UIKit
 
 class ViewController: UIViewController, UIPopoverControllerDelegate, UITableViewDelegate, UITableViewDataSource {
 
-	@IBOutlet var toolbar: UIToolbar
-	@IBOutlet var primaryWebview: UIWebView
-	@IBOutlet var secondaryWebview: UIWebView
-	@IBOutlet var resolutionBarButton: UIBarButtonItem
-	@IBOutlet var secondScreenRefreshButton: UIBarButtonItem
+	@IBOutlet var toolbar: UIToolbar!
+	@IBOutlet var primaryWebview: UIWebView!
+	@IBOutlet var secondaryWebview: UIWebView!
+	@IBOutlet var resolutionBarButton: UIBarButtonItem!
+	@IBOutlet var secondScreenRefreshButton: UIBarButtonItem!
 
-	@lazy var secondWindow = UIWindow()
+	lazy var secondWindow = UIWindow()
 
 	var popoverMenu:UIPopoverController?
 	var secondScreen:UIScreen?
@@ -151,7 +151,7 @@ class ViewController: UIViewController, UIPopoverControllerDelegate, UITableView
 		secondaryWebview.frame = secondWindow.frame
 		secondWindow.addSubview(self.secondaryWebview)
 		secondWindow.makeKeyAndVisible()
-		primaryWebview.window.makeKeyWindow()
+		primaryWebview.window!.makeKeyWindow()
 	}
 
 	func loadWebAddress(address:String, webview: UIWebView){
@@ -226,7 +226,7 @@ class ViewController: UIViewController, UIPopoverControllerDelegate, UITableView
 			availableModes = screen.availableModes
 		}
 		var currentMode: UIScreenMode =  availableModes.objectAtIndex(indexPath.item) as UIScreenMode
-		cell.textLabel.text = "\(Int(currentMode.size.width))x\(Int(currentMode.size.height))"
+		cell.textLabel!.text = "\(Int(currentMode.size.width))x\(Int(currentMode.size.height))"
 		return cell
 	}
 	
@@ -243,7 +243,7 @@ class ViewController: UIViewController, UIPopoverControllerDelegate, UITableView
 		if let screen = secondScreen{
 			var availableModes = []
 			availableModes = screen.availableModes
-			screen.currentMode = availableModes.objectAtIndex(indexPath.item) as UIScreenMode
+			screen.currentMode = (availableModes.objectAtIndex(indexPath.item) as UIScreenMode)
 
 			if let popover = popoverMenu{
 				popover.dismissPopoverAnimated(true)
