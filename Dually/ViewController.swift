@@ -156,7 +156,7 @@ class ViewController: UIViewController, UIPopoverControllerDelegate, UITableView
 
 	func loadWebAddress(address:String, webview: UIWebView){
 		var url = NSURL(string: address)
-		var request = NSURLRequest(URL: url, cachePolicy: NSURLRequestCachePolicy.ReloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 0)
+		var request = NSURLRequest(URL: url!, cachePolicy: NSURLRequestCachePolicy.ReloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 0)
 		webview.loadRequest(request)
 	}
 	
