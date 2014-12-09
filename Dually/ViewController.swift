@@ -26,7 +26,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIPopoverControllerDelegate, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UIPopoverControllerDelegate, UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate {
 
 	@IBOutlet var toolbar: UIToolbar!
 	@IBOutlet var primaryWebview: UIWebView!
@@ -49,10 +49,15 @@ class ViewController: UIViewController, UIPopoverControllerDelegate, UITableView
 	override func viewDidAppear(animated: Bool) {
 		subscribeToSecondScreenNotifications()
 		screenDidChange(nil)
+
+		setupSwipeGesture()
+		
 		getDefaults()
 		primaryWebview.scrollView.delaysContentTouches = false
 		primaryWebview.scrollView.bounces = false
 		primaryWebview.scrollView.decelerationRate = UIScrollViewDecelerationRateNormal
+		
+		toolbar.hidden = false
 		
 		loadWebAddress(primary_screen_address, webview: primaryWebview)
 		loadWebAddress(second_screen_address, webview: secondaryWebview)
@@ -67,6 +72,22 @@ class ViewController: UIViewController, UIPopoverControllerDelegate, UITableView
 		println("Memory warning recieved")
 	}
 	
+	func setupSwipeGesture(){
+		let tapGesture = UITapGestureRecognizer(target: self, action: Selector("toggleToolbar:"))
+		tapGesture.numberOfTouchesRequired = 2
+		tapGesture.numberOfTapsRequired = 3
+		self.view.addGestureRecognizer(tapGesture)
+	}
+	
+	func toggleToolbar(recognizer : UISwipeGestureRecognizer){
+		if toolbar.hidden {
+			toolbar.hidden = false
+		}
+		else{
+			toolbar.hidden = true
+		}
+	}
+
 	func getDefaults(){
 		let options = NSUserDefaults.standardUserDefaults()
 
@@ -156,7 +177,7 @@ class ViewController: UIViewController, UIPopoverControllerDelegate, UITableView
 
 	func loadWebAddress(address:String, webview: UIWebView){
 		var url = NSURL(string: address)
-		var request = NSURLRequest(URL: url, cachePolicy: NSURLRequestCachePolicy.ReloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 0)
+		var request = NSURLRequest(URL: url!, cachePolicy: NSURLRequestCachePolicy.ReloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 0)
 		webview.loadRequest(request)
 	}
 	

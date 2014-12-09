@@ -4,11 +4,13 @@ Dually
 Quickly and easily display content on a second screen from your iOS device using Airplay or an HDMI adapter. [Dually](https://github.com/roundhouse/Dually) on GitHub.
 
 ## Features
+* Written in Swift and built for 8.1
 * A web view for each screen, each capable of loading a different URL.
 * Manual refresh for each of the screens
 * Settings app configuration to control URLs. Great when used with Guided access to secure the iOS for guest use.
 * Automatic refresh when the URLs change in the Settings app
 * Second screen resolution menu, allows you to control the resolution of the external display.
+* Two finger triple tap will toggle the bottom toolbar visibility on the primary screen *(Useful when using the app in a single screen situation)*.
 
 ## Usage
 * Download/Clone the git repo
